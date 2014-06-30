@@ -4,9 +4,11 @@ language:
 go:
     - tip
 
-script:
+before_install:
     - go get gopkg.in/check.v1
     - go get code.google.com/p/go.tools/cmd/cover
     - go get github.com/mattn/goveralls
+
+script:
     - go test -covermode=count -coverprofile=profile.cov
     - $HOME/gopath/bin/goveralls -coverprofile=profile.cov -service=travis-ci
