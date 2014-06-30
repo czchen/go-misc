@@ -1,5 +1,6 @@
 # go-misc
 [![Build Status](https://travis-ci.org/czchen/go-misc.svg?branch=master)](https://travis-ci.org/czchen/go-misc)
+[![Coverage Status](https://coveralls.io/repos/czchen/go-misc/badge.png?branch=master)](https://coveralls.io/r/czchen/go-misc?branch=master)
 
 This is a playgound of [golang](http://golang.org/)
 
