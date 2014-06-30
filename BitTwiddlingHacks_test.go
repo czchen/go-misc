@@ -1,7 +1,7 @@
 package gomisc
 
 import (
-	"gopkg.in/check.v1"
+	. "gopkg.in/check.v1"
 	"testing"
 )
 
