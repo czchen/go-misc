@@ -4,7 +4,7 @@ language:
 go:
     - tip
 
-before_install:
+install:
     - go get gopkg.in/check.v1
     - go get code.google.com/p/go.tools/cmd/cover
     - go get github.com/mattn/goveralls
