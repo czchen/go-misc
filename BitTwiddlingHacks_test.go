@@ -26,6 +26,11 @@ func (s *MySuite) TestNoBranchAbs(c *C) {
 	c.Assert(NoBranchAbs0(-1), Equals, int64(1))
 }
 
+func (s *MySuite) TestMinimum0(c *C) {
+	c.Assert(Minimum0(100, 200), Equals, int64(100))
+	c.Assert(Minimum0(100, -200), Equals, int64(-200))
+}
+
 func (s *MySuite) TestIsPowOf2(c *C) {
 	c.Assert(IsPowOfTwo0(0), Equals, false)
 	c.Assert(IsPowOfTwo0(1), Equals, true)
