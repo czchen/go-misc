@@ -2,16 +2,16 @@
 
 package gomisc
 
-func HaveSameSign(x, y int64) bool {
+func HaveSameSign0(x, y int64) bool {
 	return x^y >= 0
 }
 
-func NoBranchAbs(x int64) int64 {
+func NoBranchAbs0(x int64) int64 {
 	mask := x >> (64 - 1)
 	return (x + mask) ^ mask
 }
 
-func IsPowOf2(x int64) bool {
+func IsPowOfTwo0(x int64) bool {
 	if x == 0 {
 		return false
 	}
@@ -19,7 +19,7 @@ func IsPowOf2(x int64) bool {
 	return (x & (x - 1)) == 0
 }
 
-func CountBits(x uint64) int {
+func CountBits0(x uint64) int {
 	c := 0
 
 	for ; x != 0; c++ {
@@ -29,7 +29,7 @@ func CountBits(x uint64) int {
 	return c
 }
 
-func CountBitsAlt(x uint64) int {
+func CountBits1(x uint64) int {
 	S := [...]uint{1, 2, 4, 8, 16, 32}
 	B := [...]uint64{
 		0x5555555555555555,
@@ -47,20 +47,20 @@ func CountBitsAlt(x uint64) int {
 	return int(x)
 }
 
-func HasZeroByte(x uint64) bool {
+func HasZeroByte0(x uint64) bool {
 	return (((x & 0x7f7f7f7f7f7f7f7f) - 0x0101010101010101) & 0x8080808080808080) != 0
 }
 
-func HasByte(x uint64, b uint8) bool {
-	return HasZeroByte(x ^ (0x0101010101010101 * uint64(b)))
+func HasByte0(x uint64, b uint8) bool {
+	return HasZeroByte0(x ^ (0x0101010101010101 * uint64(b)))
 }
 
-func GetLeastSignificantOneBit(x uint64) uint64 {
+func GetLeastSignificantOneBit0(x uint64) uint64 {
 	return x & -x
 }
 
-func ComputeNextBitPermutation(x uint64) uint64 {
-	y := GetLeastSignificantOneBit(x)
+func ComputeNextBitPermutation0(x uint64) uint64 {
+	y := GetLeastSignificantOneBit0(x)
 	c := x + y
 	return (x^c)>>2/y | c
 }
