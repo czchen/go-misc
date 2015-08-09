@@ -31,6 +31,11 @@ func (s *MySuite) TestMinimum0(c *C) {
 	c.Assert(Minimum0(100, -200), Equals, int64(-200))
 }
 
+func (s *MySuite) TestMaximum0(c *C) {
+	c.Assert(Maximum0(100, 200), Equals, int64(200))
+	c.Assert(Maximum0(100, -200), Equals, int64(100))
+}
+
 func (s *MySuite) TestIsPowOfTwo0(c *C) {
 	c.Assert(IsPowOfTwo0(0), Equals, false)
 	c.Assert(IsPowOfTwo0(1), Equals, true)

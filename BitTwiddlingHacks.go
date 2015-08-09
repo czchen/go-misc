@@ -23,6 +23,19 @@ func Minimum0(x, y int64) int64 {
 	return y ^ ((x ^ y) & -flag)
 }
 
+func Maximum0(x, y int64) int64 {
+	var flag int64
+
+	if x < y {
+		flag = 1
+	} else {
+		flag = 0
+	}
+
+	return x ^ ((x ^ y) & -flag)
+}
+
+
 func IsPowOfTwo0(x int64) bool {
 	if x == 0 {
 		return false
