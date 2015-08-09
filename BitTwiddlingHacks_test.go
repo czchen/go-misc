@@ -69,6 +69,11 @@ func (s *MySuite) TestHasByte0(c *C) {
 	c.Assert(HasByte0(0x0102030405060708, 0x09), Equals, false)
 }
 
+func (s *MySuite) TestConditionalSet0(c *C) {
+	c.Assert(ConditionalSet0(true, 0, 1), Equals, uint64(1))
+	c.Assert(ConditionalSet0(false, 1, 1), Equals, uint64(0))
+}
+
 func (s *MySuite) TestGetLeastSignificantOneBit0(c *C) {
 	c.Assert(GetLeastSignificantOneBit0(0x0102030405060708), Equals, uint64(0x08))
 }
