@@ -80,6 +80,7 @@ func HasByte0(x uint64, b uint8) bool {
 	return HasZeroByte0(x ^ (0x0101010101010101 * uint64(b)))
 }
 
+// if (f) w |= m; else w &= ~m;
 func ConditionalSet0(cond bool, mask, value uint64) uint64 {
 	var flag uint64
 
